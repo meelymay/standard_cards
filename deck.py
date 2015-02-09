@@ -7,6 +7,7 @@ class Suit(Enum):
     diamonds = 2
     clubs = 3
 
+
 class Rank(Enum):
     _K = 13
     _Q = 12
@@ -20,7 +21,7 @@ class Rank(Enum):
     _4 = 4
     _3 = 3
     _2 = 2
-    _A = 0
+    _A = 1
 
 class Card:
     def __init__(self, suit, rank):
