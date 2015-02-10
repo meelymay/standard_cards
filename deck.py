@@ -40,7 +40,7 @@ class Deck:
         cards = []
         for i in range(n):
             if len(self.pile) == 0:
-                return cards
+                break
             card = random.choice(self.pile)
             self.pile.remove(card)
             self.out.append(card)
@@ -49,6 +49,13 @@ class Deck:
 
     def shuffle(self):
         self.pile += self.out
+        self.out = []
+        try:
+            assert len(self.pile) == 52
+        except AssertionError, e:
+            for card in self.pile:
+                print card
+            print len(self.pile)
 
     def create_cards(self):
         deck = []

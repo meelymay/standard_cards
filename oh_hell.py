@@ -71,7 +71,7 @@ class ManualPlayer(Player):
             cards = [c for c in legal if c.rank == Rank[rank] and c.suit == Suit[suit]]
 
         card = cards[0]
-        print self,'plays',card
+        print self,'plays\t\t\t',card
         self.hand.remove(card)
         return card
 
